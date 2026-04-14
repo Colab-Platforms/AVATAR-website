@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center pt-16 relative overflow-hidden"
+      className="min-h-screen flex items-center    relative overflow-hidden"
       style={{ backgroundColor: "#e8f5f0" }}
     >
       {/* Subtle dot pattern overlay */}
