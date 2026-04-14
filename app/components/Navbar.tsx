@@ -14,8 +14,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full  border-b border-gray-200">
-      <div className=" mx-auto container px-10 py-5 flex items-center justify-between">
+    <nav className="w-full border-b border-gray-200 sticky top-0 bg-white z-50 ">
+      <div className="mx-auto container px-10 py-5 flex items-center justify-between">
 
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2">
@@ -52,10 +52,11 @@ export default function Navbar() {
         {/* CTA Button */}
         <a
           href="#courses"
-          className="hidden md:flex items-center gap-2 bg-emerald-400 hover:bg-emerald-500 text-white text-lg font-semibold px-5 py-2 rounded-full transition-colors duration-200"
+          className="!hidden md:!flex btn btn-primary btn-md"
+
         >
           <LogIn size={15} />
-          Checkout Now
+          Checkout Now  
         </a>
 
         {/* Mobile Toggle */}
