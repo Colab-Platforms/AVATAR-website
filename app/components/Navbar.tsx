@@ -14,7 +14,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-[#f0f4f8] border-b border-gray-200">
+    <nav className="w-full  border-b border-gray-200">
       <div className=" mx-auto container px-10 py-5 flex items-center justify-between">
 
         {/* Logo */}
