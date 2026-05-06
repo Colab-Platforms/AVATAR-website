@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import Image from "next/image";
 
 const instructors = [
   {
@@ -92,14 +91,10 @@ export default function BestTeacher() {
             >
               <div className="flex items-start gap-4">
                 {/* Instructor Image */}
-                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-gray-200">
-                  <Image
-                    src={instructor.image}
-                    alt={instructor.name}
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                  <span className="text-white text-xl font-bold">
+                    {instructor.name.charAt(0)}
+                  </span>
                 </div>
 
                 {/* Instructor Info */}

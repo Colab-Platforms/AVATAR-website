@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, BookOpen, BarChart3 } from "lucide-react";
-import Image from "next/image";
 
 const courses = [
   {
@@ -97,13 +96,10 @@ export default function PopularCourses() {
               className="bg-gray-50 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               {/* Course Image */}
-              <div className="relative h-56 bg-gray-200">
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative h-56 bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
+                <span className="text-white text-3xl font-bold">
+                  {course.title}
+                </span>
               </div>
 
               {/* Course Content */}

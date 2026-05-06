@@ -1,98 +1,150 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, LogIn } from "lucide-react";
+import { Menu, X, LogIn, ChevronDown } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Courses", href: "#courses" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  {
+    label: "Webinars",
+    dropdown: [
+      { label: "Cyber Safety Webinar", href: "/cyberwebinar" },
+    ],
+  },
+  { label: "Courses", href: "/courses" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full border-b border-gray-200 sticky top-0 bg-white z-50 ">
+    <nav className="w-full border-b border-gray-200 sticky top-0 bg-white z-50">
       <div className="mx-auto container px-10 py-5 flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2">
-          <div className="w-8 h-9 relative">
-            <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <rect x="4" y="0" width="28" height="36" rx="3" fill="#4f46e5" opacity="0.85"/>
-              <rect x="8" y="6" width="28" height="36" rx="3" fill="#6366f1" opacity="0.7"/>
-              <rect x="0" y="4" width="28" height="36" rx="3" fill="#312e81"/>
-            </svg>
-          </div>
-          <span className="text-xl font-bold text-gray-800">
-            AVATAR<span className="text-emerald-500">.</span>
-          </span>
-        </a>
+        <Link href="/" className="flex items-center">
 
-        {/* Desktop Links */}
+        <div>
+          <Image 
+            src="/assets/images/magnific__background__97576.png" 
+            alt="Avatar Logo" 
+            width={150}
+            height={60}
+          
+          />
+
+        </div>
+
+          
+        </Link>
+
+        {/* ✅ Desktop Nav (Hover Dropdown) */}
         <ul className="hidden md:flex items-center gap-7">
-          {navLinks.map((link, i) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className={`text-lg font-medium transition-colors duration-200 ${
-                  i === 0
-                    ? "text-gray-900 font-semibold"
-                    : "text-gray-500 hover:text-gray-900"
-                }`}
-              >
-                {link.label}
-              </a>
+          {navLinks.map((link) => (
+            <li key={link.label} className="relative group">
+
+              {/* Normal Link */}
+              {!link.dropdown ? (
+                <Link
+                  href={link.href}
+                  className="text-gray-600 hover:text-gray-900 font-medium"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <>
+                  {/* Dropdown Trigger */}
+                  <div className="flex items-center gap-1 cursor-pointer text-gray-600 hover:text-gray-900 font-medium">
+                    {link.label}
+                    <ChevronDown size={16} />
+                  </div>
+
+                  {/* Dropdown Menu */}
+                  <div className="absolute left-0 top-8 w-56 bg-white shadow-lg rounded-md py-2 
+                                  opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                  transition-all duration-200">
+                    {link.dropdown.map((item) => (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              )}
             </li>
           ))}
         </ul>
 
-        {/* CTA Button */}
-        <a
-          href="#courses"
-          className="!hidden md:!flex btn btn-primary btn-md"
-
+        {/* CTA */}
+        <Link
+          href="/#courses"
+          className="hidden md:flex items-center gap-2 bg-emerald-400 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-sm"
         >
           <LogIn size={15} />
-          Checkout Now  
-        </a>
+          Checkout Now
+        </Link>
 
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-gray-600"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (unchanged) */}
       {menuOpen && (
         <div className="md:hidden bg-[#f0f4f8] border-t px-6 pb-4">
           <ul className="flex flex-col gap-4 mt-4">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors duration-200"
-                >
-                  {link.label}
-                </a>
+                {!link.dropdown ? (
+                  <Link
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-gray-600 hover:text-gray-900 font-medium text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <div>
+                    <div className="text-gray-600 font-medium text-sm mb-2">
+                      {link.label}
+                    </div>
+                    <div className="pl-4 flex flex-col gap-2">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.label}
+                          href={item.href}
+                          onClick={() => setMenuOpen(false)}
+                          className="text-gray-500 hover:text-gray-900 text-sm"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
-          <a
-            href="#courses"
+
+          <Link
+            href="/#courses"
             onClick={() => setMenuOpen(false)}
-            className="mt-4 inline-flex items-center gap-2 bg-emerald-400 hover:bg-emerald-500 text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200"
+            className="mt-4 inline-flex items-center gap-2 bg-emerald-400 hover:bg-emerald-500 text-white text-sm px-5 py-2 rounded-full"
           >
             <LogIn size={15} />
             Checkout Now
-          </a>
+          </Link>
         </div>
       )}
     </nav>

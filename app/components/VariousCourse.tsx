@@ -10,28 +10,28 @@ const steps = [
     iconBg: "bg-emerald-50",
     iconColor: "text-emerald-600",
     title: "Create Account",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit Nullam.",
+    description: "Sign up on Avatar in under 60 seconds. Tell us your age, role, and goals — we'll personalize your AI learning journey.",
   },
   {
     icon: CheckSquare,
     iconBg: "bg-indigo-50",
     iconColor: "text-indigo-600",
     title: "Select Courses",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit Nullam.",
+    description: "Choose from Cybersecurity, AI for Students, AI for Working Professionals, or AI for 45+ — each tailored to your specific needs and pace.",
   },
   {
     icon: Mail,
     iconBg: "bg-orange-50",
     iconColor: "text-orange-600",
     title: "Confirmation Mail",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit Nullam.",
+    description: "Choose from Cybersecurity, AI for Students, AI for Working Professionals, or AI for 45+ — each tailored to your specific needs and pace.",
   },
   {
     icon: User,
     iconBg: "bg-yellow-50",
     iconColor: "text-yellow-600",
     title: "Enjoy your Course",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit Nullam.",
+    description: "Attend live interactive classes, solve real projects, earn your Avatar Certificate, and start using AI to transform your work and life.",
   },
 ];
 
@@ -47,14 +47,14 @@ export default function VariousCourse() {
               Join over 15,00+ tech people
             </p>
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-              Various types of courses will scale up your skills
+              Various types of AI courses designed to scale up your skills
             </h2>
           </div>
           <div className="flex items-center">
             <p className="text-gray-600 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel
-              risus id ligula ullamcorper sollicitudin. Mauris quis convallis
-              nunc. Class aptent taciti sociosqu.
+             At Avatar, we offer a wide range of practical, hands-on AI programs built for every learner — students, working professionals, and seniors. Learn Prompt Engineering, AI tools, and Cybersecurity from industry experts through live, interactive sessions that deliver real results from Day 1.
+
+
             </p>
           </div>
         </div>

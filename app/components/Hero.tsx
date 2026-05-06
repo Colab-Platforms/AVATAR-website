@@ -42,75 +42,67 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="flex flex-col gap-5 z-10 w-full"
         >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 sm:gap-3 bg-white rounded-full px-3 sm:px-4 py-2 shadow-sm w-fit border border-gray-100">
-            <span className="bg-gray-900 text-white text-xs font-bold px-2.5 sm:px-3 py-1 rounded-full whitespace-nowrap">
-              New
-            </span>
-            <p className="text-xs sm:text-sm text-gray-600 leading-tight">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-[1.05] tracking-tight">
-            Develop your{" "}
-            <span className="text-emerald-500 italic">skills</span>
+            Stop Working Hard.{" "}
             <br />
-            in a new and
-            <br />
-            unique way.
+            Start Working{" "}
+            <span className="text-emerald-500 italic">Smart</span> — With AI.
           </h1>
 
           {/* Subtext */}
-          <div className="space-y-1">
-            <p className="text-gray-600 text-sm sm:text-base font-medium">
-              Your dream courses are waiting for you. 👋
-            </p>
-            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed max-w-md">
-              Join thousands of learners and unlock your potential with
-              expert-led courses tailored to your goals.
+          <div className="space-y-2">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-2xl">
+              We don't teach robots. We teach <strong>YOU</strong> how to use AI tools that save hours, simplify your work, and make everyday tasks feel effortless. No coding. No degrees. Just practical AI that works from Day 1.
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="flex items-center gap-6 sm:gap-10 py-1">
-            <div>
-              <p className="text-xl sm:text-2xl font-black text-gray-900">200+</p>
-              <p className="text-xs sm:text-sm text-gray-500 font-medium">Courses</p>
+          {/* Trust Badges */}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 py-2">
+            <div className="flex items-center gap-1.5">
+              <span className="text-emerald-500 text-lg">✅</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">No Coding Required</span>
             </div>
-            <div className="w-px h-8 sm:h-10 bg-gray-300" />
-            <div>
-              <p className="text-xl sm:text-2xl font-black text-gray-900">6.7k</p>
-              <p className="text-xs sm:text-sm text-gray-500 font-medium">Students</p>
+            <div className="hidden sm:block w-px h-4 bg-gray-300" />
+            <div className="flex items-center gap-1.5">
+              <span className="text-emerald-500 text-lg">✅</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">Beginner Friendly</span>
             </div>
-            <div className="w-px h-8 sm:h-10 bg-gray-300" />
-            <div>
-              <p className="text-xl sm:text-2xl font-black text-gray-900">50+</p>
-              <p className="text-xs sm:text-sm text-gray-500 font-medium">Mentors</p>
+            <div className="hidden sm:block w-px h-4 bg-gray-300" />
+            <div className="flex items-center gap-1.5">
+              <span className="text-emerald-500 text-lg">✅</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">Live & Hands-on</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-gray-300" />
+            <div className="flex items-center gap-1.5">
+              <span className="text-emerald-500 text-lg">✅</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">Certified</span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-gray-300" />
+            <div className="flex items-center gap-1.5">
+              <span className="text-emerald-500 text-lg">✅</span>
+              <span className="text-xs sm:text-sm text-gray-600 font-medium">Real Results</span>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-4 sm:gap-5 mt-1 flex-wrap">
+          <div className="flex items-center gap-4 sm:gap-5 mt-2 flex-wrap">
             <motion.a
               href="#courses"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 sm:px-10 py-3 sm:py-4 rounded-full transition-colors duration-200 shadow-lg cursor-pointer text-sm sm:text-base"
             >
-              Get Started
+              Book Your Free Demo
             </motion.a>
-            <motion.button
+            <motion.a
+              href="#programs"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 sm:gap-3 text-gray-700 font-semibold hover:text-gray-900 transition-colors duration-200"
+              className="bg-white hover:bg-gray-50 text-gray-900 font-bold px-7 sm:px-10 py-3 sm:py-4 rounded-full transition-colors duration-200 shadow-md cursor-pointer text-sm sm:text-base border-2 border-gray-200"
             >
-              <span className="bg-gray-900 text-white p-3 sm:p-3.5 rounded-full shadow-md flex items-center justify-center">
-                <Play size={14} fill="white" />
-              </span>
-              <span className="text-sm sm:text-base">Play Video</span>
-            </motion.button>
+              Explore Our Programs
+            </motion.a>
           </div>
         </motion.div>
 
