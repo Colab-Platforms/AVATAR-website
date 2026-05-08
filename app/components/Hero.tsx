@@ -7,8 +7,8 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center    relative overflow-hidden"
-      style={{ backgroundColor: "#e8f5f0" }}
+      className="min-h-screen flex items-center   relative overflow-hidden"
+      style={{ backgroundColor: "var(--color-primary)" }}
     >
       {/* Subtle dot pattern overlay */}
       <div
@@ -44,10 +44,10 @@ export default function Hero() {
         >
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-[1.05] tracking-tight">
-            Stop Working Hard.{" "}
-            <br />
+            Stop Working Hard.
+            
             Start Working{" "}
-            <span className="text-emerald-500 italic">Smart</span> — With AI.
+            <span className=" text-white italic">Smart With AI.</span>
           </h1>
 
           {/* Subtext */}
@@ -91,7 +91,7 @@ export default function Hero() {
               href="#courses"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 sm:px-10 py-3 sm:py-4 rounded-full transition-colors duration-200 shadow-lg cursor-pointer text-sm sm:text-base"
+              className="btn-color text-white font-bold px-7 sm:px-10 py-3 sm:py-4 rounded-full transition-colors duration-200 shadow-lg cursor-pointer text-sm sm:text-base"
             >
               Book Your Free Demo
             </motion.a>

@@ -7,7 +7,7 @@ export default function AvatarPromise() {
   return (
     <section
       className="py-20 relative overflow-hidden"
-      style={{ backgroundColor: "#e8f5f0" }}
+      style={{ backgroundColor: "var(--color-primary)" }}
     >
       {/* Subtle dot pattern overlay */}
       <div
@@ -21,7 +21,7 @@ export default function AvatarPromise() {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Icon */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -31,7 +31,7 @@ export default function AvatarPromise() {
           <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
             <MessageCircle className="w-8 h-8 text-white" />
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Heading */}
         <motion.div
@@ -68,7 +68,7 @@ export default function AvatarPromise() {
               href="#demo"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-full transition-colors duration-200 shadow-lg cursor-pointer text-base flex items-center gap-2"
+              className="btn-color text-white font-bold px-8 py-4 rounded-full transition-colors duration-200 shadow-lg cursor-pointer text-base flex items-center gap-2"
             >
               <MessageCircle className="w-5 h-5" />
               Start Your Free Demo

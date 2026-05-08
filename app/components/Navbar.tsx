@@ -85,7 +85,7 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           href="/#courses"
-          className="hidden md:flex items-center gap-2 bg-emerald-400 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-sm"
+          className="hidden md:flex items-center gap-2 btn-color text-white px-4 py-2 rounded-full text-sm"
         >
           <LogIn size={15} />
           Checkout Now

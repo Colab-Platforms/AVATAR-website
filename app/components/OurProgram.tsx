@@ -52,7 +52,7 @@ const programs = [
 
 export default function OurProgram() {
   return (
-    <section id="programs" className="py-20 bg-white">
+    <section id="programs" className="py-20 ">
       <div className="container mx-auto px-6">
         
         {/* Header */}

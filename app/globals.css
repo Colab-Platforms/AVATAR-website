@@ -5,10 +5,17 @@
    ============================================ */
 :root {
   /* Colors - Primary */
-  --color-primary: #10b981;
+  /* --color-primary: #10b981;
   --color-primary-light: #34d399;
+  --color-primary-dark: #059669; */
+
+  --color-primary: #abbdc9;
+  --color-primary-light: white;
   --color-primary-dark: #059669;
-  
+
+  --color-blue-primary: #0a3a73;
+  --color-blue-light: #0060d1;
+
   /* Colors - Emerald Scale */
   --emerald-50: #ecfdf5;
   --emerald-100: #d1fae5;
@@ -96,6 +103,18 @@
    TYPOGRAPHY
    ============================================ */
 
+   body{
+     background-color: var(--color-primary-light);
+   }
+
+
+   @layer base{
+    .btn-color {
+      @apply bg-[#0a3a73] hover:bg-[#0060d1]
+    }
+   }
+
+     
 /* Headings */
 .heading-hero {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
